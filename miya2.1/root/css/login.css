@@ -1,0 +1,35 @@
+a:link{text-decoration: none;}
+a:active{text-decoration: none;}
+a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+#big{width:100%;height:642px;}
+.content{width:1200px;height:642px;margin:50px auto;}
+.content .cont{width:100%;height:400px;margin:0px auto;}
+.cont .left{width:653px;height:372px;float: left;cursor: pointer;padding:14px 0 14px 0;}
+.cont .right{width:382px;height:380px;float: left;margin-left:100px;border:2px solid #f7f7f7;margin-top:10px;}
+.content .conb{font-size: 13px;color:#cccccc;margin:0 auto;width:900px;margin-top:200px;}
+.lot .l{font-size: 19px;color:#f897a2;float: left;padding:20px 0 5px 20px;}
+.lot .r{float: right;padding:27px 25px 5px 0;}
+.lot .r i{font-size: 13px;color:#f450a2;}
+.lot .r em{font-size: 11px;color:#666666;}
+.tel{position: relative;}
+.tel .tsho{width:336px;height:44px;position: absolute;left:22px;top:80px;border:1px solid #cfcfcf;}
+.tel .tsho i{font-size: 22px;color:#cbcbcb;position: absolute;left:10px;top:10px;}
+.tel .tsho input{width:280px;height:30px;position: absolute;top:6px;left:40px;font-size: 14px;border: 0;}
+.tel .thid{position: absolute;left:22px;top:47px;display: none;}
+.pass{position: relative;}
+.pass .phid{position: absolute;left:22px;top:126px;display: none;}
+.pass .psho{width:336px;height:44px;position: absolute;left:22px;top:155px;border:1px solid #cfcfcf;}
+.pass .psho i{font-size: 22px;color:#cbcbcb;position: absolute;left:10px;top:10px;}
+.pass .psho input{width:280px;height:30px;position: absolute;top:6px;left:40px;font-size: 14px;border: 0;}
+.iden{position: relative;}
+.iden .ihid{position: absolute;left:22px;top:200px;display: none;}
+.iden .isho{width:336px;height:44px;position: absolute;left:22px;top:230px;}
+.iden .isho .il{width:166px;height:44px;border:1px solid #cfcfcf;}
+.iden .isho .il input{width:150px;height:30px;position: absolute;top:6px;left:10px;font-size: 14px;border: 0;}
+.iden .isho .ir{width:100px;height:39px;background: url("../images/iden.png") no-repeat;position: absolute;right:0;top:3px;color:red;font-size: 18px;text-align: center;line-height: 39px;}
+.forget{position: relative;left:22px;top:290px;width:336px;height: 20px;}
+.forget label{font-size: 13px;color: #666666;position: absolute;position:absolute;left:10px;top:0px;width:120px;}
+.forget a{font-size: 13px;color: #666666;float: right;width:80px;position:absolute;right:0px;top:5px;}
+.forget a:hover{color:#f450a2;text-decoration: none;}
+.right .login{width:313px;height:47px;background: #f450a2;display: block;position: relative;top:300px;left:30px;font-size: 20px;text-align: center;line-height: 47px;color:#fff;}

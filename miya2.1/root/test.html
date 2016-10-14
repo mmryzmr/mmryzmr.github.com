@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-1.7.2.js"></script>
+    <script src="js/cookie.js"></script>
+    <style>
+    	#div1{width:100%;height:40px;background:red;opacity: 0.3;filter:alpha(opacity:30);}
+		#div2{width:100%;height:40px;display:none;}
+		.slide{width:200px;height:200px;background:rgba(0,0,0,0.1);margin:200px auto;color:#000;position:absolute;left:100px;bottom:0px;}
+    </style>
+    <script>
+       /* window.onload=function(){
+            var oBtn=document.getElementById('btn');
+            oBtn.onclick=function(){
+                alert(1);
+               window.open('index-2.0.html','_self');
+            }
+			
+        }*/
+		
+		$(function(){
+			/*$('.in').click(function(){
+				alert($('.in').attr('checked'));
+			});
+			setCookie('aa',false);
+			//alert(typeof getCookie('aa'));
+			var check='false';
+			alert(Boolean(check));*/
+			//吸顶条
+			/*var Pt=$('#div1').offset().top;
+			$(window).scroll(function(){
+				if($(window).scrollTop()>Pt){
+					if(window.navigator.userAgent.indexOf('MSIE 6.0')!=-1){
+						$('#div1').css('position','absolute');
+						$('#div1').css('top',$(window).scroll());
+					}else{
+						$('#div1').css('position','fixed');
+						$('#div1').css('top',0);
+					}
+					$('#div1').css('left',0);
+					$('#div2').css('display','block');
+				}else{
+					$('#div1').css('position','');	
+					$('#div2').css('display','none');
+				}
+			});*/
+			$('.slide').click(function(){
+				$(this).animate({
+					'height':400	
+				},1000);
+			});
+		});
+		
+    </script>
+</head>
+<body style="height: 3000px;">
+<!--<input type="button" value="点击" id="btn">
+<input type="checkbox" class="in">  
+-->
+<!--4）图片懒加载：节约资源，节约带宽，节约money
+怎么查看图片是否加载：chrome -> network -> 可以看到加载痕迹
+如何不让图片加载：不给src，需要加载的时候给src就行了，（解决方法：将src写成_src即可）
+
+5）自定义属性：①.点操作属性
+②[]即能操作属性，也能操作变量
+③obj.getAttribute(自定义属性的名字);[得到在页面中写好的自定义属性]
+设置自定义属性：obj.setAttribute(属性名，属性值);
+删除自定义属性：obj.removeAttribute(属性名);
+操作属性要配套使用，不能混着用
+
+6）瀑布流：①宽度一致，小块的高度参差不齐
+②滚不完
+
+7）物体高度：offsetHeight:物体盒子高度
+scrollHeight:物体内容高度
+scrollHeight < offsetHeight -> offsetHeight
+scrollHeight > offsetHeight -> scrollHeight
+8）添加元素：a)document.createElement(标签名);
+父级.appendChild();
+父级.insertBefore( , );
+b）oDiv.innerHTML();-> 问题：会把之前的元素的事件清空
+
+9）文本框提示：让oT聚焦/失焦：oT.onfocus 获取焦点 oT.onblur 失去焦点
+强制让oT获取/失去焦点：oT.focus() oT.blur()
+
+10)图片预加载：提前悄悄加载（目的：让用户体验更好）
+关于图片：创建图片：三种方法：①<img src=''/>②document.createElement('img')③var oImg=new Image();
+图片身上的两个事件：oImg.onload:图片加载成功 oImg.onerror:图片加载失败
+
+11）num.toFixed(保留小数位数)
+
+12）表单：多个数据以&分开
+想要把数据提交给后台：action：后台数据
+name:数据名称
+value:数据值
+提交方式：get:不安全 容量32k（默认）有缓存 post：相对安全 容量1G 没有缓存
+
+缓存：对于浏览器来说一个网址只会访问一次
+
+13）点击页面弹1：document.onclick=function(){alert(1);}
+结构上的父级的祖宗：document
+定位上的父级的根元素：document.body
+
+14)事件对象：描述（存储）事件更加详细的信息
+事件：用户的操作
+event(事件对象):兼容：chrome IE系
+ev(事件对象)：兼容：高级浏览器，低级浏览器：返回undefined
+兼容版：var oEvent=ev || event;
+鼠标位置：X轴：oEvent.clientX;
+Y轴：oEvent.clientY;
+鼠标移动事件：obj.onmousemove(触发频率非常高)
+以后使用clientX，clientY，一定要加上滚动的宽度和高度(scrollLeft/scrollTop)
+    <div id="div1"></div>
+    <div id="div2"></div>
+4）图片懒加载：节约资源，节约带宽，节约money
+怎么查看图片是否加载：chrome -> network -> 可以看到加载痕迹
+如何不让图片加载：不给src，需要加载的时候给src就行了，（解决方法：将src写成_src即可）
+
+5）自定义属性：①.点操作属性
+②[]即能操作属性，也能操作变量
+③obj.getAttribute(自定义属性的名字);[得到在页面中写好的自定义属性]
+设置自定义属性：obj.setAttribute(属性名，属性值);
+删除自定义属性：obj.removeAttribute(属性名);
+操作属性要配套使用，不能混着用
+
+6）瀑布流：①宽度一致，小块的高度参差不齐
+②滚不完
+
+7）物体高度：offsetHeight:物体盒子高度
+scrollHeight:物体内容高度
+scrollHeight < offsetHeight -> offsetHeight
+scrollHeight > offsetHeight -> scrollHeight
+8）添加元素：a)document.createElement(标签名);
+父级.appendChild();
+父级.insertBefore( , );
+b）oDiv.innerHTML();-> 问题：会把之前的元素的事件清空
+
+9）文本框提示：让oT聚焦/失焦：oT.onfocus 获取焦点 oT.onblur 失去焦点
+强制让oT获取/失去焦点：oT.focus() oT.blur()
+
+10)图片预加载：提前悄悄加载（目的：让用户体验更好）
+关于图片：创建图片：三种方法：①<img src=''/>②document.createElement('img')③var oImg=new Image();
+图片身上的两个事件：oImg.onload:图片加载成功 oImg.onerror:图片加载失败
+
+11）num.toFixed(保留小数位数)
+
+12）表单：多个数据以&分开
+想要把数据提交给后台：action：后台数据
+name:数据名称
+value:数据值
+提交方式：get:不安全 容量32k（默认）有缓存 post：相对安全 容量1G 没有缓存
+
+缓存：对于浏览器来说一个网址只会访问一次
+
+13）点击页面弹1：document.onclick=function(){alert(1);}
+结构上的父级的祖宗：document
+定位上的父级的根元素：document.body
+
+14)事件对象：描述（存储）事件更加详细的信息
+事件：用户的操作
+event(事件对象):兼容：chrome IE系
+ev(事件对象)：兼容：高级浏览器，低级浏览器：返回undefined
+兼容版：var oEvent=ev || event;
+鼠标位置：X轴：oEvent.clientX;
+Y轴：oEvent.clientY;
+鼠标移动事件：obj.onmousemove(触发频率非常高)
+以后使用clientX，clientY，一定要加上滚动的宽度和高度(scrollLeft/scrollTop)
+-->
+	<div class="slide">sjdfjsjfksfka</div>
+</body>
+
+</html>
